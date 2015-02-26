@@ -1,3 +1,6 @@
-<h1>{{ page.title|replace('-', ' ') }}</h1>
+<section>
+  <h1>{{ page.title|replace('-', ' ') }}</h1>
 
-{{ page.content }}
+  {{ page.content }}
+</section>
+<aside>Sidebar</aside>
