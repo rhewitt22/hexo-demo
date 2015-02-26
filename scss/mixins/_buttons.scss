@@ -1,0 +1,22 @@
+%btn {
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: .5em 1em;
+}
+
+@mixin my-button($color: $fws-blue) {
+  @extend %btn;
+  color: white;
+  background-color: tint($color, 10);
+  border: 4px solid $color;
+  &:hover {
+    color: white;
+    background-color: $color;
+    border: 4px solid shade($color, 20);
+  }
+  &:active {
+    background-color: shade($color, 20);
+  }
+}

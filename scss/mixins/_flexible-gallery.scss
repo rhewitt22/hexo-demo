@@ -1,0 +1,33 @@
+//Adapted from http://codepen.io/heydon/pen/bcdrl?editors=110
+@mixin flexible-gallery($columns: 3, $margin: 5%) {
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    
+    margin-right: $margin;
+    margin-left: -4px;
+    width: (100% / $columns) - (($margin * ($columns - 1)) / $columns);
+
+    &:nth-child(n) {
+      margin-bottom: $margin / 2;
+      margin-right: $margin;
+    }
+    &:nth-child(#{$columns}n) {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $i from 1 through $columns {
+    li:nth-child(#{$columns}n+1):nth-last-child(#{$i})  {
+      width: (100% / $i) - (($margin * ($columns - 1)) / $columns);
+      & ~ li {
+        width: (100% / $i) - (($margin * ($columns - 1)) / $columns);
+      }
+    }
+  }
+}

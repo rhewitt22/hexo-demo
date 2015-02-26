@@ -1,7 +1,11 @@
-{% include "../_partial/head.swig" %}
+{{ partial('_partial/head.swig') }}
   <body>
-    {% include "../_partial/header.swig" %}
-    <section class="main-content">{{ body }}</section>
-    {% include "../_partial/footer.swig" %}
+    {{ partial('_partial/header.swig') }}
+    <div class="container">
+      <section class="content">{{ body }}</section>
+      <aside></aside>
+    </div>
+    {{ partial('_partial/footer.swig') }}
+    {{ partial('_partial/after-footer.swig') }}
   </body>
 </html>

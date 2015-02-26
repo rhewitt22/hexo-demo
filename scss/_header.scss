@@ -1,0 +1,42 @@
+header {
+  background-image: url('/southeast/img/hero/lower-suwannee-prescribed-burn-smaller.jpg');
+  background-position: right;
+  background-size: cover;
+  height: 300px;
+  max-height: 30%;
+}
+
+.search-bar {
+  @extend %clearfix;
+  background-color: $fws-blue;
+  padding: .5em;
+  text-align: right;
+  form {
+    width: 75%;
+    margin: 0;
+    float: left;
+
+  }
+
+  @media (min-width: 600px) {
+    input[type="search"] {
+      width: 250px;
+    }
+  }
+
+  @media (min-width: 800px) {
+    input[type="search"] {
+      width: 350px;
+    }
+  }
+
+}
+
+.navigation-btn {
+  @include my-button(darken(#006ebe, 45));
+
+  @media (min-width: 400px) {
+    display: block;
+    float: right;  
+  }
+}

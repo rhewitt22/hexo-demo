@@ -1,0 +1,20 @@
+.container {
+  @extend %clearfix;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 3%;
+}
+
+.list-grid {
+  list-style: none;
+  padding-left: 0;
+  
+  @media (min-width: 700px) {
+    @include flexible-gallery(2);
+  }
+
+  @media (min-width: 1000px) {
+    @include flexible-gallery(3)
+  }
+}

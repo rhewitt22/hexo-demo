@@ -5,16 +5,16 @@
 # Site
 title: USFWS Southeast
 subtitle:
-description: # 155 characters
+description: 'The mission of the U.S. Fish and Wildlife Service is working with others to conserve, protect, and enhance fish, wildlife, plants, and their habitats for the continuing benefit of the American people.'# 155 characters
 author: Roy Hewitt
 language: en
-timezone:
+timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://fws.gov/southeast
+url: http://fws.gov/southeast/
 root: /southeast/
-permalink: :year/:month/:day/:title/
+permalink: :category/:year/:month/:day/:title/
 permalink_defaults:
 
 # Directory

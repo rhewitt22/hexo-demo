@@ -1,0 +1,40 @@
+footer {
+  background: #eee;
+  padding: 3%;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1.5em;
+  }
+}
+
+.external-links {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    
+    &:after {
+      content: ' | ';
+    }
+
+    &:last-child:after {
+      content: '';
+    }
+  }
+
+  @media (min-width: 800px) {
+    font-size: .75em;
+  }
+}
+
+.last-updated {
+  font-size: .8em;
+  text-align: center;
+}
+
+.mission-statement {
+  font-size: .8em;
+  padding: 1.5em;
+}
